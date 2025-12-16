@@ -1,4 +1,4 @@
-# 🚲 NYC Citi Bike Analizi: Kentsel Mobilite Optimizasyonu
+# DENEME🚲 NYC Citi Bike Analizi: Kentsel Mobilite Optimizasyonu
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Pandas](https://img.shields.io/badge/Data-Analysis-green)
@@ -63,4 +63,4 @@ Bu projede aşağıdaki kütüphaneler kullanılmıştır:
 * **Analiz:** Scikit-Learn (Kümeleme/Clustering analizi için)
 
 ---
-*Bu proje [Adın Soyadın] tarafından GitHub üzerinde hazırlanmıştır.*
+
