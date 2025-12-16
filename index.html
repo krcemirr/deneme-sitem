@@ -11,16 +11,16 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             /* Arka plan resmi ayarları */
-            background-image: url('nyc-bg.jpg'); /* BU İSİM ÇOK ÖNEMLİ */
+            background-image: url('nyc-bg.jpg'); /* Resim dosyanın adı */
             background-size: cover;
             background-position: center;
             background-attachment: fixed; /* Resim sabit kalır, sayfa kayar */
             color: #333;
         }
 
-        /* KARARTMA KATMANI (Yazılar daha net okunsun diye) */
+        /* KARARTMA KATMANI */
         .overlay {
-            background-color: rgba(0, 0, 0, 0.5); /* %50 Siyah Filtre */
+            background-color: rgba(0, 0, 0, 0.4); /* Arka planı biraz daha aydınlık bıraktık (%40 karartma) */
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -29,40 +29,45 @@
             padding-bottom: 60px;
         }
 
-        /* İÇERİK KUTUSU (Cam Efekti) */
+        /* İÇERİK KUTUSU (GÜNCELLENDİ: ŞEFFAF CAM EFEKTİ) */
         .container {
-            width: 85%;
+            width: 80%; /* Kenarlardan daha fazla manzara görünsün diye biraz daralttık */
             max-width: 900px;
-            background-color: rgba(255, 255, 255, 0.95); /* %95 Beyaz */
+            
+            /* İŞTE SİHİRLİ DOKUNUŞ BURADA: 0.75 (%75 Görünürlük) */
+            background-color: rgba(255, 255, 255, 0.85); 
+            
             padding: 50px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px); /* Arkadaki görüntüyü kutu arkasında hafif buzlar (Modern efekt) */
         }
 
         /* BAŞLIKLAR VE METİNLER */
         h1 {
-            color: #003366; /* Citi Bike Mavisi */
+            color: #003366; 
             text-align: center;
-            border-bottom: 4px solid #FFD700; /* Taksi Sarısı */
+            border-bottom: 4px solid #FFD700; 
             padding-bottom: 15px;
             margin-bottom: 30px;
         }
         h2 { color: #0055a5; margin-top: 40px; border-left: 5px solid #FFD700; padding-left: 10px; }
         p { line-height: 1.6; font-size: 1.1em; }
 
-        /* ETİKETLER (Badges) */
+        /* ETİKETLER */
         .badge {
-            background: #eee; padding: 5px 12px; border-radius: 20px;
-            font-size: 0.85em; font-weight: bold; margin-right: 5px; color: #555;
+            background: #333; color: #fff; padding: 5px 12px; border-radius: 20px;
+            font-size: 0.85em; font-weight: bold; margin-right: 5px;
         }
         
         /* TAKIM LİSTESİ */
         .team {
-            background-color: #f0f4f8;
+            background-color: rgba(0, 51, 102, 0.1); /* Takım alanı da hafif şeffaf mavi */
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             margin-top: 20px;
+            border: 1px solid #003366;
         }
         .team strong { display: block; margin-bottom: 10px; color: #003366; font-size: 1.2em; }
     </style>
@@ -73,21 +78,21 @@
     <div class="container">
         
         <div style="text-align: center; margin-bottom: 20px;">
-            <span class="badge">IE 421 Projesi</span>
+            <span class="badge">IE 421</span>
             <span class="badge">Data Science</span>
             <span class="badge">Optimization</span>
         </div>
         
         <h1>🚲 NYC Citi Bike Analizi</h1>
         
-        <p><strong>Proje Tanımı:</strong> New York şehrindeki bisiklet paylaşım sisteminin (Citi Bike) verimliliğini artırmak ve istasyon doluluk oranlarını dengelemek amacıyla yapılan veri analizi çalışmasıdır.</p>
+        <p><strong>Proje Tanımı:</strong> Bu çalışma, New York şehrindeki bisiklet paylaşım sisteminin (Citi Bike) verimliliğini artırmak, istasyon doluluk oranlarını dengelemek ve kullanıcı davranışlarını analiz etmek amacıyla <strong>Endüstri Mühendisliği</strong> bitirme projesi kapsamında geliştirilmiştir.</p>
 
         <div class="team">
             <strong>🐢 Ninja Turtles Takımı</strong>
             Veli Erenay Açıl • Bersu Yılmaz • Mert Ada Demirbaş • Emirhan Karaca
         </div>
 
-        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #ddd;">
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #aaa;">
 
         <h2>1. Problem Tespiti</h2>
         <p>Manhattan bölgesindeki iş merkezlerinde sabah saatlerinde (08:00 - 09:30) aşırı yığılme olurken, yerleşim bölgelerinde bisiklet bulunamamaktadır. Bu durum müşteri memnuniyetsizliğine ve operasyonel maliyet artışına neden olmaktadır.</p>
@@ -101,17 +106,17 @@
         </ul>
 
         <h2>3. Görsel Analizler</h2>
-        <p>Buraya projenizle ilgili Python grafiklerini ekleyeceğiz. (Resim kodu buraya gelecek)</p>
+        <p>Proje kapsamında elde edilen bulguların görselleştirilmiş hali aşağıdadır:</p>
         
-        <div style="background: #e9ecef; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #666;">
-            [Grafik 1: Saatlik Kullanım Yoğunluğu Gelecek]
+        <div style="background: rgba(0,0,0,0.05); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #666; border: 2px dashed #999;">
+            [Grafikleriniz Buraya Gelecek]
         </div>
 
         <h2>4. Sonuç ve Öneriler</h2>
-        <p>Analizler sonucunda, talebin yoğun olduğu saatlerde belirli rotalar arasında "mekik (shuttle)" kamyonlarının çalıştırılması önerilmiştir.</p>
+        <p>Analizler sonucunda, talebin yoğun olduğu saatlerde belirli rotalar arasında "mekik (shuttle)" kamyonlarının çalıştırılması ve dinamik fiyatlandırma modeline geçilmesi önerilmiştir.</p>
 
         <br>
-        <div style="text-align: center; font-size: 0.9em; color: #888;">
+        <div style="text-align: center; font-size: 0.9em; color: #555; margin-top: 30px;">
             İstanbul Bilgi Üniversitesi © 2025
         </div>
 
